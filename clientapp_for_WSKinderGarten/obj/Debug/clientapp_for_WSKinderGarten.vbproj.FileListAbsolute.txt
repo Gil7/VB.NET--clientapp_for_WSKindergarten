@@ -17,3 +17,6 @@ c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKi
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateStudent.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.DeleteStudent.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.UpdateStudent.resources
+c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateTutor.resources
+c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.DeleteTutor.resources
+c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.UpdateTutor.resources

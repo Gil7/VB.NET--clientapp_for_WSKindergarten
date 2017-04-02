@@ -90,6 +90,24 @@
     <Compile Include="Apps\Students\UpdateStudent.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Apps\Tutors\CreateTutor.Designer.vb">
+      <DependentUpon>CreateTutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Tutors\CreateTutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Tutors\DeleteTutor.Designer.vb">
+      <DependentUpon>DeleteTutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Tutors\DeleteTutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Tutors\UpdateTutor.Designer.vb">
+      <DependentUpon>UpdateTutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Tutors\UpdateTutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Index.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +175,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Apps\Students\UpdateStudent.resx">
       <DependentUpon>UpdateStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Tutors\CreateTutor.resx">
+      <DependentUpon>CreateTutor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Tutors\DeleteTutor.resx">
+      <DependentUpon>DeleteTutor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Tutors\UpdateTutor.resx">
+      <DependentUpon>UpdateTutor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.vb</DependentUpon>
@@ -230,7 +257,6 @@
     <Folder Include="Apps\Charges\" />
     <Folder Include="Apps\Consumptions\" />
     <Folder Include="Apps\Menus\" />
-    <Folder Include="Apps\Tutors\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

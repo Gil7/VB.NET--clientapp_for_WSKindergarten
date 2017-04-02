@@ -1,0 +1,2478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/Datos.xsd" />
+      <s:import schemaLocation="http://localhost:1534/Service.asmx?schema=Datos" namespace="http://tempuri.org/Datos.xsd" />
+      <s:element name="WS_get_all_students">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_studentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_studentsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_student">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="am" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_ingreso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_baja" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_studentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_studentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_student">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_studentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_studentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_student">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="am" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_ingreso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_baja" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_studentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_studentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_student">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_studentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_studentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_tutors">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_tutorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_tutorsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_tutor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_tutorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_tutorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_tutor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="am" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentesco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tutorado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_tutorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_update_tutorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_tutor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_tutorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_tutorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_tutor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="am" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentesco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tutorado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_tutorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_tutorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_phones">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_phonesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_phonesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_phone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_phoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_phoneResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_phone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_phoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_phoneResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_phone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_phoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_phoneResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_phone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_phoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_phoneResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_accounts">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_accountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_accountsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_account">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_accountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_accountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_accout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_accoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_accoutResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_account">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_accountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_accountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_account">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_accountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_accountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_charges">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_chargesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_chargesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_charge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_chargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_chargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ws_update_charge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ws_update_chargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ws_update_chargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_charge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_chargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_chargeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_charge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_chargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_chargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_menus">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_menusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_menusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_menu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_menuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_create_menuResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_menu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_menuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_menuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_menu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_menuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_menuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_menu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_menuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_menuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_saucers">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_saucersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_saucersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="menu_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_saucerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_saucerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="menu_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_saucerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_saucerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_consumptions">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_consumptionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_consumptionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_consumption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="menu_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_consumptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_consumptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_consumption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_consumptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_consumptionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_consumption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="menu_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_consumptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_consumptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_consumption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_consumptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_consumptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_ingredients">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_ingredientsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_ingredientsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_ingredient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_ingredientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_ingredientResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_ingredient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_ingredientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_ingredientResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_ingredient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_ingredientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_ingredientResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_ingredient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_ingredientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_ingredientResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_ingredients_saucers">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_ingredients_saucersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_ingredients_saucersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_ingredient_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="plato_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingrediente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_ingredient_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_ingredient_saucerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_ingredient_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_ingredient_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_ingredient_saucerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_ingredient_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="plato_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingrediente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_ingredient_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_ingredient_saucerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_ingredient_saucer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_ingredient_saucerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_ingredient_saucerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_all_allergies">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_get_all_allergiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_get_all_allergiesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_alergy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingrediente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_create_alergyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_create_alergyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_allergy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_find_allergyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_allergyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_alergy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingrediente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_update_alergyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_update_alergyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_alergy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_delete_alergyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_delete_alergyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WS_get_all_studentsSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_students" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_studentsSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_studentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_studentSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_student" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_studentSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_studentResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_studentSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_student" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_studentSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_studentResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_studentSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_student" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_studentSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_studentResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_studentSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_student" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_studentSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_studentResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_tutorsSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_tutors" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_tutorsSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_tutorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_tutorSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_tutor" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_tutorSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_tutorResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_tutorSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_tutor" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_tutorSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_tutorResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_tutorSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_tutor" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_tutorSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_tutorResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_tutorSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_tutor" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_tutorSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_tutorResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_phonesSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_phones" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_phonesSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_phonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_phoneSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_phone" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_phoneSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_phoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_phoneSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_phone" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_phoneSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_phoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_phoneSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_phone" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_phoneSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_phoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_phoneSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_phone" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_phoneSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_phoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_accountsSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_accounts" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_accountsSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_accountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_accountSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_account" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_accountSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_accountResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_accoutSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_accout" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_accoutSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_accoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_accountSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_account" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_accountSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_accountResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_accountSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_account" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_accountSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_accountResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_chargesSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_charges" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_chargesSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_chargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_chargeSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_charge" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_chargeSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_chargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ws_update_chargeSoapIn">
+    <wsdl:part name="parameters" element="tns:Ws_update_charge" />
+  </wsdl:message>
+  <wsdl:message name="Ws_update_chargeSoapOut">
+    <wsdl:part name="parameters" element="tns:Ws_update_chargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_chargeSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_charge" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_chargeSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_chargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_chargeSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_charge" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_chargeSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_chargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_menusSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_menus" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_menusSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_menusResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_menuSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_menu" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_menuSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_menuResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_menuSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_menu" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_menuSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_menuResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_menuSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_menu" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_menuSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_menuResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_menuSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_menu" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_menuSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_menuResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_saucersSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_saucers" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_saucersSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_saucersResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_consumptionsSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_consumptions" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_consumptionsSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_consumptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_consumptionSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_consumption" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_consumptionSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_consumptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_consumptionSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_consumption" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_consumptionSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_consumptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_consumptionSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_consumption" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_consumptionSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_consumptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_consumptionSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_consumption" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_consumptionSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_consumptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_ingredientsSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_ingredients" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_ingredientsSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_ingredientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_ingredientSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_ingredient" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_ingredientSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_ingredientResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_ingredientSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_ingredient" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_ingredientSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_ingredientResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_ingredientSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_ingredient" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_ingredientSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_ingredientResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_ingredientSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_ingredient" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_ingredientSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_ingredientResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_ingredients_saucersSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_ingredients_saucers" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_ingredients_saucersSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_ingredients_saucersResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_ingredient_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_ingredient_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_ingredient_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_ingredient_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_ingredient_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_ingredient_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_ingredient_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_ingredient_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_ingredient_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_ingredient_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_ingredient_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_ingredient_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_ingredient_saucerSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_ingredient_saucer" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_ingredient_saucerSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_ingredient_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_allergiesSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_all_allergies" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_all_allergiesSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_all_allergiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_alergySoapIn">
+    <wsdl:part name="parameters" element="tns:WS_create_alergy" />
+  </wsdl:message>
+  <wsdl:message name="WS_create_alergySoapOut">
+    <wsdl:part name="parameters" element="tns:WS_create_alergyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_allergySoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_allergy" />
+  </wsdl:message>
+  <wsdl:message name="WS_find_allergySoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_allergyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_alergySoapIn">
+    <wsdl:part name="parameters" element="tns:WS_update_alergy" />
+  </wsdl:message>
+  <wsdl:message name="WS_update_alergySoapOut">
+    <wsdl:part name="parameters" element="tns:WS_update_alergyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_alergySoapIn">
+    <wsdl:part name="parameters" element="tns:WS_delete_alergy" />
+  </wsdl:message>
+  <wsdl:message name="WS_delete_alergySoapOut">
+    <wsdl:part name="parameters" element="tns:WS_delete_alergyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="WS_get_all_students">
+      <wsdl:input message="tns:WS_get_all_studentsSoapIn" />
+      <wsdl:output message="tns:WS_get_all_studentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_student">
+      <wsdl:input message="tns:WS_create_studentSoapIn" />
+      <wsdl:output message="tns:WS_create_studentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_student">
+      <wsdl:input message="tns:WS_find_studentSoapIn" />
+      <wsdl:output message="tns:WS_find_studentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_student">
+      <wsdl:input message="tns:WS_update_studentSoapIn" />
+      <wsdl:output message="tns:WS_update_studentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_student">
+      <wsdl:input message="tns:WS_delete_studentSoapIn" />
+      <wsdl:output message="tns:WS_delete_studentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_tutors">
+      <wsdl:input message="tns:WS_get_all_tutorsSoapIn" />
+      <wsdl:output message="tns:WS_get_all_tutorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_tutor">
+      <wsdl:input message="tns:WS_find_tutorSoapIn" />
+      <wsdl:output message="tns:WS_find_tutorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_tutor">
+      <wsdl:input message="tns:WS_update_tutorSoapIn" />
+      <wsdl:output message="tns:WS_update_tutorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_tutor">
+      <wsdl:input message="tns:WS_delete_tutorSoapIn" />
+      <wsdl:output message="tns:WS_delete_tutorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_tutor">
+      <wsdl:input message="tns:WS_create_tutorSoapIn" />
+      <wsdl:output message="tns:WS_create_tutorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_phones">
+      <wsdl:input message="tns:WS_get_all_phonesSoapIn" />
+      <wsdl:output message="tns:WS_get_all_phonesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_phone">
+      <wsdl:input message="tns:WS_create_phoneSoapIn" />
+      <wsdl:output message="tns:WS_create_phoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_phone">
+      <wsdl:input message="tns:WS_update_phoneSoapIn" />
+      <wsdl:output message="tns:WS_update_phoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_phone">
+      <wsdl:input message="tns:WS_find_phoneSoapIn" />
+      <wsdl:output message="tns:WS_find_phoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_phone">
+      <wsdl:input message="tns:WS_delete_phoneSoapIn" />
+      <wsdl:output message="tns:WS_delete_phoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_accounts">
+      <wsdl:input message="tns:WS_get_all_accountsSoapIn" />
+      <wsdl:output message="tns:WS_get_all_accountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_account">
+      <wsdl:input message="tns:WS_create_accountSoapIn" />
+      <wsdl:output message="tns:WS_create_accountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_accout">
+      <wsdl:input message="tns:WS_find_accoutSoapIn" />
+      <wsdl:output message="tns:WS_find_accoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_account">
+      <wsdl:input message="tns:WS_update_accountSoapIn" />
+      <wsdl:output message="tns:WS_update_accountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_account">
+      <wsdl:input message="tns:WS_delete_accountSoapIn" />
+      <wsdl:output message="tns:WS_delete_accountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_charges">
+      <wsdl:input message="tns:WS_get_all_chargesSoapIn" />
+      <wsdl:output message="tns:WS_get_all_chargesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_charge">
+      <wsdl:input message="tns:WS_create_chargeSoapIn" />
+      <wsdl:output message="tns:WS_create_chargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ws_update_charge">
+      <wsdl:input message="tns:Ws_update_chargeSoapIn" />
+      <wsdl:output message="tns:Ws_update_chargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_charge">
+      <wsdl:input message="tns:WS_find_chargeSoapIn" />
+      <wsdl:output message="tns:WS_find_chargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_charge">
+      <wsdl:input message="tns:WS_delete_chargeSoapIn" />
+      <wsdl:output message="tns:WS_delete_chargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_menus">
+      <wsdl:input message="tns:WS_get_all_menusSoapIn" />
+      <wsdl:output message="tns:WS_get_all_menusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_menu">
+      <wsdl:input message="tns:WS_create_menuSoapIn" />
+      <wsdl:output message="tns:WS_create_menuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_menu">
+      <wsdl:input message="tns:WS_find_menuSoapIn" />
+      <wsdl:output message="tns:WS_find_menuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_menu">
+      <wsdl:input message="tns:WS_update_menuSoapIn" />
+      <wsdl:output message="tns:WS_update_menuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_menu">
+      <wsdl:input message="tns:WS_delete_menuSoapIn" />
+      <wsdl:output message="tns:WS_delete_menuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_saucers">
+      <wsdl:input message="tns:WS_get_all_saucersSoapIn" />
+      <wsdl:output message="tns:WS_get_all_saucersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_saucer">
+      <wsdl:input message="tns:WS_create_saucerSoapIn" />
+      <wsdl:output message="tns:WS_create_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_saucer">
+      <wsdl:input message="tns:WS_find_saucerSoapIn" />
+      <wsdl:output message="tns:WS_find_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_saucer">
+      <wsdl:input message="tns:WS_update_saucerSoapIn" />
+      <wsdl:output message="tns:WS_update_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_saucer">
+      <wsdl:input message="tns:WS_delete_saucerSoapIn" />
+      <wsdl:output message="tns:WS_delete_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_consumptions">
+      <wsdl:input message="tns:WS_get_all_consumptionsSoapIn" />
+      <wsdl:output message="tns:WS_get_all_consumptionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_consumption">
+      <wsdl:input message="tns:WS_create_consumptionSoapIn" />
+      <wsdl:output message="tns:WS_create_consumptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_consumption">
+      <wsdl:input message="tns:WS_find_consumptionSoapIn" />
+      <wsdl:output message="tns:WS_find_consumptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_consumption">
+      <wsdl:input message="tns:WS_update_consumptionSoapIn" />
+      <wsdl:output message="tns:WS_update_consumptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_consumption">
+      <wsdl:input message="tns:WS_delete_consumptionSoapIn" />
+      <wsdl:output message="tns:WS_delete_consumptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_ingredients">
+      <wsdl:input message="tns:WS_get_all_ingredientsSoapIn" />
+      <wsdl:output message="tns:WS_get_all_ingredientsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_ingredient">
+      <wsdl:input message="tns:WS_create_ingredientSoapIn" />
+      <wsdl:output message="tns:WS_create_ingredientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_ingredient">
+      <wsdl:input message="tns:WS_find_ingredientSoapIn" />
+      <wsdl:output message="tns:WS_find_ingredientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_ingredient">
+      <wsdl:input message="tns:WS_update_ingredientSoapIn" />
+      <wsdl:output message="tns:WS_update_ingredientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_ingredient">
+      <wsdl:input message="tns:WS_delete_ingredientSoapIn" />
+      <wsdl:output message="tns:WS_delete_ingredientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_ingredients_saucers">
+      <wsdl:input message="tns:WS_get_all_ingredients_saucersSoapIn" />
+      <wsdl:output message="tns:WS_get_all_ingredients_saucersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_ingredient_saucer">
+      <wsdl:input message="tns:WS_create_ingredient_saucerSoapIn" />
+      <wsdl:output message="tns:WS_create_ingredient_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_ingredient_saucer">
+      <wsdl:input message="tns:WS_find_ingredient_saucerSoapIn" />
+      <wsdl:output message="tns:WS_find_ingredient_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_ingredient_saucer">
+      <wsdl:input message="tns:WS_update_ingredient_saucerSoapIn" />
+      <wsdl:output message="tns:WS_update_ingredient_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_ingredient_saucer">
+      <wsdl:input message="tns:WS_delete_ingredient_saucerSoapIn" />
+      <wsdl:output message="tns:WS_delete_ingredient_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_allergies">
+      <wsdl:input message="tns:WS_get_all_allergiesSoapIn" />
+      <wsdl:output message="tns:WS_get_all_allergiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_alergy">
+      <wsdl:input message="tns:WS_create_alergySoapIn" />
+      <wsdl:output message="tns:WS_create_alergySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_allergy">
+      <wsdl:input message="tns:WS_find_allergySoapIn" />
+      <wsdl:output message="tns:WS_find_allergySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_alergy">
+      <wsdl:input message="tns:WS_update_alergySoapIn" />
+      <wsdl:output message="tns:WS_update_alergySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_alergy">
+      <wsdl:input message="tns:WS_delete_alergySoapIn" />
+      <wsdl:output message="tns:WS_delete_alergySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WS_get_all_students">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_students" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_student">
+      <soap:operation soapAction="http://tempuri.org/WS_create_student" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_student">
+      <soap:operation soapAction="http://tempuri.org/WS_find_student" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_student">
+      <soap:operation soapAction="http://tempuri.org/WS_update_student" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_student">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_student" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_tutors">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_tutors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_tutor">
+      <soap:operation soapAction="http://tempuri.org/WS_find_tutor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_tutor">
+      <soap:operation soapAction="http://tempuri.org/WS_update_tutor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_tutor">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_tutor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_tutor">
+      <soap:operation soapAction="http://tempuri.org/WS_create_tutor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_phones">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_phones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_phone">
+      <soap:operation soapAction="http://tempuri.org/WS_create_phone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_phone">
+      <soap:operation soapAction="http://tempuri.org/WS_update_phone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_phone">
+      <soap:operation soapAction="http://tempuri.org/WS_find_phone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_phone">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_phone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_accounts">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_accounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_account">
+      <soap:operation soapAction="http://tempuri.org/WS_create_account" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_accout">
+      <soap:operation soapAction="http://tempuri.org/WS_find_accout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_account">
+      <soap:operation soapAction="http://tempuri.org/WS_update_account" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_account">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_account" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_charges">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_charges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_charge">
+      <soap:operation soapAction="http://tempuri.org/WS_create_charge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_update_charge">
+      <soap:operation soapAction="http://tempuri.org/Ws_update_charge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_charge">
+      <soap:operation soapAction="http://tempuri.org/WS_find_charge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_charge">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_charge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_menus">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_menus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_menu">
+      <soap:operation soapAction="http://tempuri.org/WS_create_menu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_menu">
+      <soap:operation soapAction="http://tempuri.org/WS_find_menu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_menu">
+      <soap:operation soapAction="http://tempuri.org/WS_update_menu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_menu">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_menu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_saucers">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_saucers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_create_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_find_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_update_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_consumptions">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_consumptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_consumption">
+      <soap:operation soapAction="http://tempuri.org/WS_create_consumption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_consumption">
+      <soap:operation soapAction="http://tempuri.org/WS_find_consumption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_consumption">
+      <soap:operation soapAction="http://tempuri.org/WS_update_consumption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_consumption">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_consumption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_ingredients">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_ingredients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_ingredient">
+      <soap:operation soapAction="http://tempuri.org/WS_create_ingredient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_ingredient">
+      <soap:operation soapAction="http://tempuri.org/WS_find_ingredient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_ingredient">
+      <soap:operation soapAction="http://tempuri.org/WS_update_ingredient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_ingredient">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_ingredient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_ingredients_saucers">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_ingredients_saucers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_ingredient_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_create_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_ingredient_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_find_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_ingredient_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_update_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_ingredient_saucer">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_allergies">
+      <soap:operation soapAction="http://tempuri.org/WS_get_all_allergies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_alergy">
+      <soap:operation soapAction="http://tempuri.org/WS_create_alergy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_allergy">
+      <soap:operation soapAction="http://tempuri.org/WS_find_allergy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_alergy">
+      <soap:operation soapAction="http://tempuri.org/WS_update_alergy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_alergy">
+      <soap:operation soapAction="http://tempuri.org/WS_delete_alergy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WS_get_all_students">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_students" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_student">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_student" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_student">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_student" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_student">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_student" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_student">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_student" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_tutors">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_tutors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_tutor">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_tutor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_tutor">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_tutor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_tutor">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_tutor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_tutor">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_tutor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_phones">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_phones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_phone">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_phone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_phone">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_phone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_phone">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_phone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_phone">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_phone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_accounts">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_accounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_account">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_account" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_accout">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_accout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_account">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_account" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_account">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_account" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_charges">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_charges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_charge">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_charge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ws_update_charge">
+      <soap12:operation soapAction="http://tempuri.org/Ws_update_charge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_charge">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_charge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_charge">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_charge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_menus">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_menus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_menu">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_menu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_menu">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_menu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_menu">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_menu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_menu">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_menu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_saucers">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_saucers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_consumptions">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_consumptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_consumption">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_consumption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_consumption">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_consumption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_consumption">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_consumption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_consumption">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_consumption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_ingredients">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_ingredients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_ingredient">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_ingredient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_ingredient">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_ingredient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_ingredient">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_ingredient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_ingredient">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_ingredient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_ingredients_saucers">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_ingredients_saucers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_ingredient_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_ingredient_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_ingredient_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_ingredient_saucer">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_ingredient_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_all_allergies">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_all_allergies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_create_alergy">
+      <soap12:operation soapAction="http://tempuri.org/WS_create_alergy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_find_allergy">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_allergy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_update_alergy">
+      <soap12:operation soapAction="http://tempuri.org/WS_update_alergy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_delete_alergy">
+      <soap12:operation soapAction="http://tempuri.org/WS_delete_alergy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:1534/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:1534/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

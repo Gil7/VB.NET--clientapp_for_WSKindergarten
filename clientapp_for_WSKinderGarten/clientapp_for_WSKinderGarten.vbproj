@@ -72,6 +72,24 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apps\Students\CreateStudent.Designer.vb">
+      <DependentUpon>CreateStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Students\CreateStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Students\DeleteStudent.Designer.vb">
+      <DependentUpon>DeleteStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Students\DeleteStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Students\UpdateStudent.Designer.vb">
+      <DependentUpon>UpdateStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Students\UpdateStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Index.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +149,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Apps\Students\CreateStudent.resx">
+      <DependentUpon>CreateStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Students\DeleteStudent.resx">
+      <DependentUpon>DeleteStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Students\UpdateStudent.resx">
+      <DependentUpon>UpdateStudent.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.vb</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\WsKinderGarten\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Apps\Charges\" />
+    <Folder Include="Apps\Consumptions\" />
+    <Folder Include="Apps\Menus\" />
+    <Folder Include="Apps\Tutors\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

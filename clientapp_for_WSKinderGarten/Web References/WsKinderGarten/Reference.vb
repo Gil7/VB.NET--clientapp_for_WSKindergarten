@@ -1075,22 +1075,22 @@ Namespace WsKinderGarten
         
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/WS_find_menu", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function WS_find_menu(ByVal id As Integer) As Datos
-            Dim results() As Object = Me.Invoke("WS_find_menu", New Object() {id})
+        Public Function WS_find_menu(ByVal name As String) As Datos
+            Dim results() As Object = Me.Invoke("WS_find_menu", New Object() {name})
             Return CType(results(0),Datos)
         End Function
         
         '''<remarks/>
-        Public Overloads Sub WS_find_menuAsync(ByVal id As Integer)
-            Me.WS_find_menuAsync(id, Nothing)
+        Public Overloads Sub WS_find_menuAsync(ByVal name As String)
+            Me.WS_find_menuAsync(name, Nothing)
         End Sub
         
         '''<remarks/>
-        Public Overloads Sub WS_find_menuAsync(ByVal id As Integer, ByVal userState As Object)
+        Public Overloads Sub WS_find_menuAsync(ByVal name As String, ByVal userState As Object)
             If (Me.WS_find_menuOperationCompleted Is Nothing) Then
                 Me.WS_find_menuOperationCompleted = AddressOf Me.OnWS_find_menuOperationCompleted
             End If
-            Me.InvokeAsync("WS_find_menu", New Object() {id}, Me.WS_find_menuOperationCompleted, userState)
+            Me.InvokeAsync("WS_find_menu", New Object() {name}, Me.WS_find_menuOperationCompleted, userState)
         End Sub
         
         Private Sub OnWS_find_menuOperationCompleted(ByVal arg As Object)

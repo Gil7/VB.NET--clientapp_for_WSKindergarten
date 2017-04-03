@@ -72,6 +72,24 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apps\Menus\CreateMenu.Designer.vb">
+      <DependentUpon>CreateMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Menus\CreateMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Menus\Ingredients\CreateIngredient.Designer.vb">
+      <DependentUpon>CreateIngredient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Menus\Ingredients\CreateIngredient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Menus\Saucers\CreateSaucer.Designer.vb">
+      <DependentUpon>CreateSaucer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Menus\Saucers\CreateSaucer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Apps\Students\CreateStudent.Designer.vb">
       <DependentUpon>CreateStudent.vb</DependentUpon>
     </Compile>
@@ -167,6 +185,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Apps\Menus\CreateMenu.resx">
+      <DependentUpon>CreateMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Menus\Ingredients\CreateIngredient.resx">
+      <DependentUpon>CreateIngredient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Menus\Saucers\CreateSaucer.resx">
+      <DependentUpon>CreateSaucer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apps\Students\CreateStudent.resx">
       <DependentUpon>CreateStudent.vb</DependentUpon>
     </EmbeddedResource>
@@ -256,7 +283,6 @@
   <ItemGroup>
     <Folder Include="Apps\Charges\" />
     <Folder Include="Apps\Consumptions\" />
-    <Folder Include="Apps\Menus\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

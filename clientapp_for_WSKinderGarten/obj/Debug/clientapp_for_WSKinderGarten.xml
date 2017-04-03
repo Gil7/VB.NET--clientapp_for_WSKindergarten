@@ -280,11 +280,11 @@ clientapp_for_WSKinderGarten
 	<remarks/>
 </member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_create_menuAsync(System.String,System.Double,System.Object)">
 	<remarks/>
-</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_menu(System.Int32)">
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_menu(System.String)">
 	<remarks/>
-</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_menuAsync(System.Int32)">
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_menuAsync(System.String)">
 	<remarks/>
-</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_menuAsync(System.Int32,System.Object)">
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_menuAsync(System.String,System.Object)">
 	<remarks/>
 </member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_update_menu(System.String,System.Double,System.Int32)">
 	<remarks/>

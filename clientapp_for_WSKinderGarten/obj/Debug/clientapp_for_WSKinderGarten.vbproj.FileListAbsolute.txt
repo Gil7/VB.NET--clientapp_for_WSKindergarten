@@ -8,7 +8,6 @@ c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKi
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.xml
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.pdb
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\bin\Debug\clientapp_for_WSKinderGarten.exe.config
-c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.vbprojResolveAssemblyReference.cache
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.IndexStudents.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.IndexTutors.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.IndexMenus.resources
@@ -20,3 +19,6 @@ c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKi
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateTutor.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.DeleteTutor.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.UpdateTutor.resources
+c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateMenu.resources
+c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateIngredient.resources
+c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateSaucer.resources

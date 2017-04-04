@@ -65,7 +65,7 @@ Namespace WsKinderGarten
         
         Private WS_create_accountOperationCompleted As System.Threading.SendOrPostCallback
         
-        Private WS_find_accoutOperationCompleted As System.Threading.SendOrPostCallback
+        Private WS_find_accountsOperationCompleted As System.Threading.SendOrPostCallback
         
         Private WS_update_accountOperationCompleted As System.Threading.SendOrPostCallback
         
@@ -100,6 +100,10 @@ Namespace WsKinderGarten
         Private WS_update_saucerOperationCompleted As System.Threading.SendOrPostCallback
         
         Private WS_delete_saucerOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private WS_get_amountOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private WS_aOperationCompleted As System.Threading.SendOrPostCallback
         
         Private WS_get_all_consumptionsOperationCompleted As System.Threading.SendOrPostCallback
         
@@ -231,7 +235,7 @@ Namespace WsKinderGarten
         Public Event WS_create_accountCompleted As WS_create_accountCompletedEventHandler
         
         '''<remarks/>
-        Public Event WS_find_accoutCompleted As WS_find_accoutCompletedEventHandler
+        Public Event WS_find_accountsCompleted As WS_find_accountsCompletedEventHandler
         
         '''<remarks/>
         Public Event WS_update_accountCompleted As WS_update_accountCompletedEventHandler
@@ -283,6 +287,12 @@ Namespace WsKinderGarten
         
         '''<remarks/>
         Public Event WS_delete_saucerCompleted As WS_delete_saucerCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event WS_get_amountCompleted As WS_get_amountCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event WS_aCompleted As WS_aCompletedEventHandler
         
         '''<remarks/>
         Public Event WS_get_all_consumptionsCompleted As WS_get_all_consumptionsCompletedEventHandler
@@ -804,29 +814,29 @@ Namespace WsKinderGarten
         End Sub
         
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/WS_find_accout", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function WS_find_accout(ByVal id As Integer) As Datos
-            Dim results() As Object = Me.Invoke("WS_find_accout", New Object() {id})
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/WS_find_accounts", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function WS_find_accounts(ByVal dni As String) As Datos
+            Dim results() As Object = Me.Invoke("WS_find_accounts", New Object() {dni})
             Return CType(results(0),Datos)
         End Function
         
         '''<remarks/>
-        Public Overloads Sub WS_find_accoutAsync(ByVal id As Integer)
-            Me.WS_find_accoutAsync(id, Nothing)
+        Public Overloads Sub WS_find_accountsAsync(ByVal dni As String)
+            Me.WS_find_accountsAsync(dni, Nothing)
         End Sub
         
         '''<remarks/>
-        Public Overloads Sub WS_find_accoutAsync(ByVal id As Integer, ByVal userState As Object)
-            If (Me.WS_find_accoutOperationCompleted Is Nothing) Then
-                Me.WS_find_accoutOperationCompleted = AddressOf Me.OnWS_find_accoutOperationCompleted
+        Public Overloads Sub WS_find_accountsAsync(ByVal dni As String, ByVal userState As Object)
+            If (Me.WS_find_accountsOperationCompleted Is Nothing) Then
+                Me.WS_find_accountsOperationCompleted = AddressOf Me.OnWS_find_accountsOperationCompleted
             End If
-            Me.InvokeAsync("WS_find_accout", New Object() {id}, Me.WS_find_accoutOperationCompleted, userState)
+            Me.InvokeAsync("WS_find_accounts", New Object() {dni}, Me.WS_find_accountsOperationCompleted, userState)
         End Sub
         
-        Private Sub OnWS_find_accoutOperationCompleted(ByVal arg As Object)
-            If (Not (Me.WS_find_accoutCompletedEvent) Is Nothing) Then
+        Private Sub OnWS_find_accountsOperationCompleted(ByVal arg As Object)
+            If (Not (Me.WS_find_accountsCompletedEvent) Is Nothing) Then
                 Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent WS_find_accoutCompleted(Me, New WS_find_accoutCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+                RaiseEvent WS_find_accountsCompleted(Me, New WS_find_accountsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
         
@@ -1286,6 +1296,60 @@ Namespace WsKinderGarten
             If (Not (Me.WS_delete_saucerCompletedEvent) Is Nothing) Then
                 Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
                 RaiseEvent WS_delete_saucerCompleted(Me, New WS_delete_saucerCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/WS_get_amount", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function WS_get_amount(ByVal matricula As String, ByVal fecha_i As String, ByVal fecha_final As String) As Double
+            Dim results() As Object = Me.Invoke("WS_get_amount", New Object() {matricula, fecha_i, fecha_final})
+            Return CType(results(0),Double)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub WS_get_amountAsync(ByVal matricula As String, ByVal fecha_i As String, ByVal fecha_final As String)
+            Me.WS_get_amountAsync(matricula, fecha_i, fecha_final, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub WS_get_amountAsync(ByVal matricula As String, ByVal fecha_i As String, ByVal fecha_final As String, ByVal userState As Object)
+            If (Me.WS_get_amountOperationCompleted Is Nothing) Then
+                Me.WS_get_amountOperationCompleted = AddressOf Me.OnWS_get_amountOperationCompleted
+            End If
+            Me.InvokeAsync("WS_get_amount", New Object() {matricula, fecha_i, fecha_final}, Me.WS_get_amountOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnWS_get_amountOperationCompleted(ByVal arg As Object)
+            If (Not (Me.WS_get_amountCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent WS_get_amountCompleted(Me, New WS_get_amountCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/WS_a", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function WS_a(ByVal matricula As String, ByVal fecha_i As String, ByVal fecha_final As String) As Datos
+            Dim results() As Object = Me.Invoke("WS_a", New Object() {matricula, fecha_i, fecha_final})
+            Return CType(results(0),Datos)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub WS_aAsync(ByVal matricula As String, ByVal fecha_i As String, ByVal fecha_final As String)
+            Me.WS_aAsync(matricula, fecha_i, fecha_final, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub WS_aAsync(ByVal matricula As String, ByVal fecha_i As String, ByVal fecha_final As String, ByVal userState As Object)
+            If (Me.WS_aOperationCompleted Is Nothing) Then
+                Me.WS_aOperationCompleted = AddressOf Me.OnWS_aOperationCompleted
+            End If
+            Me.InvokeAsync("WS_a", New Object() {matricula, fecha_i, fecha_final}, Me.WS_aOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnWS_aOperationCompleted(ByVal arg As Object)
+            If (Not (Me.WS_aCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent WS_aCompleted(Me, New WS_aCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
         
@@ -7988,13 +8052,13 @@ Namespace WsKinderGarten
     
     '''<remarks/>
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440")>  _
-    Public Delegate Sub WS_find_accoutCompletedEventHandler(ByVal sender As Object, ByVal e As WS_find_accoutCompletedEventArgs)
+    Public Delegate Sub WS_find_accountsCompletedEventHandler(ByVal sender As Object, ByVal e As WS_find_accountsCompletedEventArgs)
     
     '''<remarks/>
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class WS_find_accoutCompletedEventArgs
+    Partial Public Class WS_find_accountsCompletedEventArgs
         Inherits System.ComponentModel.AsyncCompletedEventArgs
         
         Private results() As Object
@@ -8468,6 +8532,60 @@ Namespace WsKinderGarten
             Get
                 Me.RaiseExceptionIfNecessary
                 Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440")>  _
+    Public Delegate Sub WS_get_amountCompletedEventHandler(ByVal sender As Object, ByVal e As WS_get_amountCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class WS_get_amountCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Double
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Double)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440")>  _
+    Public Delegate Sub WS_aCompletedEventHandler(ByVal sender As Object, ByVal e As WS_aCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class WS_aCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Datos
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Datos)
             End Get
         End Property
     End Class

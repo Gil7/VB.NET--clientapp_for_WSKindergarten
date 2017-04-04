@@ -22,3 +22,7 @@ c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKi
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateMenu.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateIngredient.resources
 c:\users\gilberto\documents\visual studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateSaucer.resources
+C:\Users\Gilberto\Documents\Visual Studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateConsumption.resources
+C:\Users\Gilberto\Documents\Visual Studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateAccount.resources
+C:\Users\Gilberto\Documents\Visual Studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreatePhone.resources
+C:\Users\Gilberto\Documents\Visual Studio 2013\Projects\Index\clientapp_for_WSKinderGarten\obj\Debug\clientapp_for_WSKinderGarten.CreateCharge.resources

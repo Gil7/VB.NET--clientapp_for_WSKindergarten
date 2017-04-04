@@ -294,17 +294,17 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="WS_find_accout">
+      <s:element name="WS_find_accounts">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="WS_find_accoutResponse">
+      <s:element name="WS_find_accountsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="WS_find_accoutResult">
+            <s:element minOccurs="0" maxOccurs="1" name="WS_find_accountsResult">
               <s:complexType>
                 <s:sequence>
                   <s:any namespace="http://tempuri.org/Datos.xsd" />
@@ -590,6 +590,44 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="WS_delete_saucerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_amount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_i" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_final" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_get_amountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_get_amountResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_a">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_i" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_final" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_aResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_aResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Datos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1021,11 +1059,11 @@
   <wsdl:message name="WS_create_accountSoapOut">
     <wsdl:part name="parameters" element="tns:WS_create_accountResponse" />
   </wsdl:message>
-  <wsdl:message name="WS_find_accoutSoapIn">
-    <wsdl:part name="parameters" element="tns:WS_find_accout" />
+  <wsdl:message name="WS_find_accountsSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_find_accounts" />
   </wsdl:message>
-  <wsdl:message name="WS_find_accoutSoapOut">
-    <wsdl:part name="parameters" element="tns:WS_find_accoutResponse" />
+  <wsdl:message name="WS_find_accountsSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_find_accountsResponse" />
   </wsdl:message>
   <wsdl:message name="WS_update_accountSoapIn">
     <wsdl:part name="parameters" element="tns:WS_update_account" />
@@ -1128,6 +1166,18 @@
   </wsdl:message>
   <wsdl:message name="WS_delete_saucerSoapOut">
     <wsdl:part name="parameters" element="tns:WS_delete_saucerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_amountSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_get_amount" />
+  </wsdl:message>
+  <wsdl:message name="WS_get_amountSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_get_amountResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_aSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_a" />
+  </wsdl:message>
+  <wsdl:message name="WS_aSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_aResponse" />
   </wsdl:message>
   <wsdl:message name="WS_get_all_consumptionsSoapIn">
     <wsdl:part name="parameters" element="tns:WS_get_all_consumptions" />
@@ -1318,9 +1368,9 @@
       <wsdl:input message="tns:WS_create_accountSoapIn" />
       <wsdl:output message="tns:WS_create_accountSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="WS_find_accout">
-      <wsdl:input message="tns:WS_find_accoutSoapIn" />
-      <wsdl:output message="tns:WS_find_accoutSoapOut" />
+    <wsdl:operation name="WS_find_accounts">
+      <wsdl:input message="tns:WS_find_accountsSoapIn" />
+      <wsdl:output message="tns:WS_find_accountsSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="WS_update_account">
       <wsdl:input message="tns:WS_update_accountSoapIn" />
@@ -1389,6 +1439,14 @@
     <wsdl:operation name="WS_delete_saucer">
       <wsdl:input message="tns:WS_delete_saucerSoapIn" />
       <wsdl:output message="tns:WS_delete_saucerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_amount">
+      <wsdl:input message="tns:WS_get_amountSoapIn" />
+      <wsdl:output message="tns:WS_get_amountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_a">
+      <wsdl:input message="tns:WS_aSoapIn" />
+      <wsdl:output message="tns:WS_aSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="WS_get_all_consumptions">
       <wsdl:input message="tns:WS_get_all_consumptionsSoapIn" />
@@ -1626,8 +1684,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="WS_find_accout">
-      <soap:operation soapAction="http://tempuri.org/WS_find_accout" style="document" />
+    <wsdl:operation name="WS_find_accounts">
+      <soap:operation soapAction="http://tempuri.org/WS_find_accounts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1781,6 +1839,24 @@
     </wsdl:operation>
     <wsdl:operation name="WS_delete_saucer">
       <soap:operation soapAction="http://tempuri.org/WS_delete_saucer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_amount">
+      <soap:operation soapAction="http://tempuri.org/WS_get_amount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_a">
+      <soap:operation soapAction="http://tempuri.org/WS_a" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2124,8 +2200,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="WS_find_accout">
-      <soap12:operation soapAction="http://tempuri.org/WS_find_accout" style="document" />
+    <wsdl:operation name="WS_find_accounts">
+      <soap12:operation soapAction="http://tempuri.org/WS_find_accounts" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2279,6 +2355,24 @@
     </wsdl:operation>
     <wsdl:operation name="WS_delete_saucer">
       <soap12:operation soapAction="http://tempuri.org/WS_delete_saucer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_get_amount">
+      <soap12:operation soapAction="http://tempuri.org/WS_get_amount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_a">
+      <soap12:operation soapAction="http://tempuri.org/WS_a" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

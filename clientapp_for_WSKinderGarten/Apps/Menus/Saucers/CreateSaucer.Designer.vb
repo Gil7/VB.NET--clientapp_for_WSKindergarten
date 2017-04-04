@@ -27,6 +27,8 @@ Partial Class CreateSaucer
         Me.txtNameSaucer = New System.Windows.Forms.TextBox()
         Me.btnAddSaucerToMenu = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'txtIdMenu
@@ -72,11 +74,29 @@ Partial Class CreateSaucer
         Me.Button1.Text = "Terminar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(578, 240)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(120, 95)
+        Me.ListBox1.TabIndex = 5
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(578, 131)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 6
+        '
         'CreateSaucer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(762, 492)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAddSaucerToMenu)
         Me.Controls.Add(Me.txtNameSaucer)
@@ -93,4 +113,6 @@ Partial Class CreateSaucer
     Friend WithEvents txtNameSaucer As System.Windows.Forms.TextBox
     Friend WithEvents btnAddSaucerToMenu As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

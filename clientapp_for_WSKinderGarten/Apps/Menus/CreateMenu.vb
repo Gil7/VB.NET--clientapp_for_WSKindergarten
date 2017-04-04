@@ -16,7 +16,7 @@
                 txtContinu.Text = "Agregar platillos a: " + name + "."
                 btnAddSaucer.Visible = True
                 specificMenu = clientWs.WS_find_menu(name)
-                Dim items = specificMenu.AsEnumerable().Select(Function(d) DirectCast(d(0).ToString(), Object)).ToArray()
+
                 'Retrieve id of menu for the next Form
                 idMenu = specificMenu.Tables(4).Rows(0)("id").ToString
                 MsgBox(idMenu)

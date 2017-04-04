@@ -42,7 +42,7 @@ clientapp_for_WSKinderGarten
 	<remarks/>
 </member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_create_accountCompleted">
 	<remarks/>
-</member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accoutCompleted">
+</member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accountsCompleted">
 	<remarks/>
 </member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_update_accountCompleted">
 	<remarks/>
@@ -77,6 +77,10 @@ clientapp_for_WSKinderGarten
 </member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_update_saucerCompleted">
 	<remarks/>
 </member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_delete_saucerCompleted">
+	<remarks/>
+</member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_get_amountCompleted">
+	<remarks/>
+</member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_aCompleted">
 	<remarks/>
 </member><member name="E:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_get_all_consumptionsCompleted">
 	<remarks/>
@@ -220,11 +224,11 @@ clientapp_for_WSKinderGarten
 	<remarks/>
 </member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_create_accountAsync(System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accout(System.Int32)">
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accounts(System.String)">
 	<remarks/>
-</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accoutAsync(System.Int32)">
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accountsAsync(System.String)">
 	<remarks/>
-</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accoutAsync(System.Int32,System.Object)">
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_find_accountsAsync(System.String,System.Object)">
 	<remarks/>
 </member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_update_account(System.String,System.String,System.Int32)">
 	<remarks/>
@@ -327,6 +331,18 @@ clientapp_for_WSKinderGarten
 </member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_delete_saucerAsync(System.Int32)">
 	<remarks/>
 </member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_delete_saucerAsync(System.Int32,System.Object)">
+	<remarks/>
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_get_amount(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_get_amountAsync(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_get_amountAsync(System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_a(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_aAsync(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_aAsync(System.String,System.String,System.String,System.Object)">
 	<remarks/>
 </member><member name="M:clientapp_for_WSKinderGarten.WsKinderGarten.Service.WS_get_all_consumptions">
 	<remarks/>
@@ -690,11 +706,11 @@ Represents a strongly typed in-memory cache of data.
 	<remarks/>
 </member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_create_accountCompletedEventArgs">
 	<remarks/>
-</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_find_accoutCompletedEventHandler">
+</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_find_accountsCompletedEventHandler">
 	<remarks/>
-</member><member name="P:clientapp_for_WSKinderGarten.WsKinderGarten.WS_find_accoutCompletedEventArgs.Result">
+</member><member name="P:clientapp_for_WSKinderGarten.WsKinderGarten.WS_find_accountsCompletedEventArgs.Result">
 	<remarks/>
-</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_find_accoutCompletedEventArgs">
+</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_find_accountsCompletedEventArgs">
 	<remarks/>
 </member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_update_accountCompletedEventHandler">
 	<remarks/>
@@ -797,6 +813,18 @@ Represents a strongly typed in-memory cache of data.
 </member><member name="P:clientapp_for_WSKinderGarten.WsKinderGarten.WS_delete_saucerCompletedEventArgs.Result">
 	<remarks/>
 </member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_delete_saucerCompletedEventArgs">
+	<remarks/>
+</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_get_amountCompletedEventHandler">
+	<remarks/>
+</member><member name="P:clientapp_for_WSKinderGarten.WsKinderGarten.WS_get_amountCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_get_amountCompletedEventArgs">
+	<remarks/>
+</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_aCompletedEventHandler">
+	<remarks/>
+</member><member name="P:clientapp_for_WSKinderGarten.WsKinderGarten.WS_aCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_aCompletedEventArgs">
 	<remarks/>
 </member><member name="T:clientapp_for_WSKinderGarten.WsKinderGarten.WS_get_all_consumptionsCompletedEventHandler">
 	<remarks/>

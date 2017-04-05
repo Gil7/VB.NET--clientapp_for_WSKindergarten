@@ -38,12 +38,12 @@ Partial Class IndexStudents
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(71, 158)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(416, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(526, 320)
         Me.DataGridView1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(632, 41)
+        Me.Button1.Location = New System.Drawing.Point(655, 169)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class IndexStudents
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(632, 106)
+        Me.Button2.Location = New System.Drawing.Point(655, 221)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 2
@@ -61,7 +61,7 @@ Partial Class IndexStudents
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(632, 188)
+        Me.Button3.Location = New System.Drawing.Point(655, 274)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 3
@@ -88,9 +88,9 @@ Partial Class IndexStudents
         '
         'txtForFindStudent
         '
-        Me.txtForFindStudent.Location = New System.Drawing.Point(163, 115)
+        Me.txtForFindStudent.Location = New System.Drawing.Point(127, 115)
         Me.txtForFindStudent.Name = "txtForFindStudent"
-        Me.txtForFindStudent.Size = New System.Drawing.Size(100, 20)
+        Me.txtForFindStudent.Size = New System.Drawing.Size(136, 20)
         Me.txtForFindStudent.TabIndex = 6
         '
         'Button5

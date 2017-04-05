@@ -30,16 +30,16 @@ Partial Class IndexCharges
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(106, 127)
+        Me.DataGridView1.Location = New System.Drawing.Point(50, 50)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(515, 160)
+        Me.DataGridView1.Size = New System.Drawing.Size(515, 269)
         Me.DataGridView1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(695, 51)
+        Me.Button1.Location = New System.Drawing.Point(673, 50)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(128, 23)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Realizar cargo"
         Me.Button1.UseVisualStyleBackColor = True

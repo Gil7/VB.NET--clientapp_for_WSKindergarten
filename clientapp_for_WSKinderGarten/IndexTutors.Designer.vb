@@ -38,9 +38,9 @@ Partial Class IndexTutors
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(114, 172)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 172)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(447, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(549, 307)
         Me.DataGridView1.TabIndex = 0
         '
         'Button1
@@ -54,7 +54,7 @@ Partial Class IndexTutors
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(653, 172)
+        Me.Button2.Location = New System.Drawing.Point(653, 129)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 2
@@ -63,7 +63,7 @@ Partial Class IndexTutors
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(653, 254)
+        Me.Button3.Location = New System.Drawing.Point(653, 172)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 3
@@ -106,7 +106,7 @@ Partial Class IndexTutors
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(634, 327)
+        Me.Button6.Location = New System.Drawing.Point(641, 257)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(128, 23)
         Me.Button6.TabIndex = 12
@@ -115,7 +115,7 @@ Partial Class IndexTutors
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(634, 378)
+        Me.Button7.Location = New System.Drawing.Point(641, 308)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(128, 23)
         Me.Button7.TabIndex = 13
